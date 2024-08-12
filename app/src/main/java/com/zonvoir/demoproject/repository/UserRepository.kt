@@ -4,6 +4,8 @@ import com.zonvoir.demoproject.`interface`.ApiService
 import com.zonvoir.demoproject.model.Comment
 import com.zonvoir.demoproject.model.Post
 import com.zonvoir.demoproject.model.User
+import retrofit2.http.GET
+import retrofit2.http.Path
 
 class UserRepository(private val apiService: ApiService) {
 
@@ -26,4 +28,5 @@ class UserRepository(private val apiService: ApiService) {
     suspend fun getUserDetails(userId: Int): User {
         return apiService.getUserById(userId)
     }
+
 }

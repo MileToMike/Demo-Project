@@ -24,4 +24,5 @@ interface ApiService {
 
     @GET("users/{id}")
     suspend fun getUserById(@Path("id") userId: Int): User
+
 }
